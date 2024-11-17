@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+<style>
+th {
+  padding: 5px;
+  border: solid 2px green;
+}
+thead {
+  background-color: green;
+}
+#el {
+  background-color: yellow;
+}
+#grid {
+  margin: 1.5em 0px;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 50% 25% 25%;
+  height: 100px;
+  border: none;
+}
+@media screen and (min-width: 600px){
+  #grid {
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 630px){
+  body {
+    margin: 0;
+    padding 0;
+  }
+}
+div {
+  border: solid 1px;
+}
+.left{
+  background-color: green;
+}
+.top{
+  background-color: yellow;
+}
+.left.top {
+  background-color: orange;
+}
+div > div{
+  background-color: blue;
+}
+</style>
+
+</head>
+<body>
+  <h1>Table</h1>
+  <table>
+    <thead><tr><th>test<th>test2
+    <tbody>
+      <tr><th id=el>1.1<th>2.1
+      <tr><th id=el>1.2<th>2.2
+  </table>
+  <div id=grid>
+    <div class="left top"> text11 </div><div class=top> text12 </div><div class=top> test13 </div>
+    <div class=left> text21 </div><div> text22 </div><div> test23 </div>
+    <div class=left> text31 </div><div> text32 </div><div> test33 </div>
+
+  </div>
+</body>
